@@ -14,7 +14,7 @@ export class EventDetailService {
     return this.http.get(this.baseUrl + '/getEventDetails/' + role, { headers: { "id": ascid } });
   }*/
 
-  getEventList(): Observable<any> {
+  getEventList() {
     return this.http.get<any>('assets/data/eventlist.json')
       .toPromise()
       .then(res => <EventDetailResponse[]>res.data)
